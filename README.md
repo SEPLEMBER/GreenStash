@@ -1,6 +1,6 @@
 <p align="center">
   <a href=""><img width="200" height="200" src="https://github.com/Pool-Of-Tears/GreenStash/blob/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"></a>
-</p>
+</p> 
 <h1 align="center">GreenStash</h1>
 
 <p align="center">
