@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-
 package com.starry.greenstash
 
 import android.content.pm.ShortcutManager
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager.LayoutParams.FLAG_SECURE // <-- ДОБАВЛЕНО: импорт флага безопасности
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -59,6 +59,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // <-- ДОБАВЛЕНО: Защита от скриншотов и скрытие содержимого в меню недавних приложений
+        window.addFlags(FLAG_SECURE)
 
         settingsViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
         mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
